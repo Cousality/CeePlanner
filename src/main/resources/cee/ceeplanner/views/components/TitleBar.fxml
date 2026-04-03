@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<HBox fx:id="customTitleBar" alignment="CENTER_LEFT" spacing="10.0"
+      stylesheets="@../../styles/titlebar.css"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="cee.ceeplanner.controller.TitleBarController">
+
+    <padding>
+        <Insets left="15.0" right="10.0"/>
+    </padding>
+
+    <Label text="CeePlanner" styleClass="app-title"/>
+
+    <MenuBar styleClass="custom-menu-bar">
+        <menus>
+            <Menu text="File">
+                <items>
+                    <MenuItem text="Save"/>
+                    <MenuItem text="Exit" onAction="#handleExit"/>
+                </items>
+            </Menu>
+            <Menu text="Edit"/>
+            <Menu text="Help"/>
+        </menus>
+    </MenuBar>
+
+    <Region HBox.hgrow="ALWAYS" />
+
+    <HBox spacing="5.0" alignment="CENTER">
+        <Button text="—" onAction="#handleMinimize" styleClass="window-btn"/>
+        <Button text="X" onAction="#handleExit" styleClass="window-btn, close-btn"/>
+    </HBox>
+</HBox>
