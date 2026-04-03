@@ -15,17 +15,22 @@
 
     <Label text="CeePlanner" styleClass="app-title"/>
 
-    <MenuBar styleClass="custom-menu-bar">
-        <menus>
+    <MenuBar fx:id="menuBar" styleClass="custom-menu-bar">
             <Menu text="File">
-                <items>
-                    <MenuItem text="Save"/>
-                    <MenuItem text="Exit" onAction="#handleExit"/>
-                </items>
+                <MenuItem text="New Workspace "/>
+                <MenuItem text="Open Workspace"/>
+                <SeparatorMenuItem />
+                <MenuItem text="Save"/>
+                <MenuItem text="Save As"/>
+                <MenuItem text="Exit" onAction="#handleExit"/>
             </Menu>
-            <Menu text="Edit"/>
-            <Menu text="Help"/>
-        </menus>
+        <Menu text="Edit">
+            <MenuItem text="Undo"/>
+            <MenuItem text="Redo"/>
+        </Menu>
+        <Menu text="Help">
+            <MenuItem text="About"/>
+        </Menu>
     </MenuBar>
 
     <Region HBox.hgrow="ALWAYS" />

@@ -1,48 +1,48 @@
 /* Target the root HBox by its fx:id */
 #customTitleBar {
-    -fx-background-color: #2b2b2b;
+  -fx-background-color: #2b2b2b;
 }
 
 /* Style the application title */
 .app-title {
-    -fx-text-fill: white;
-    -fx-font-weight: bold;
-    -fx-font-size: 14px;
+  -fx-text-fill: white;
+  -fx-font-weight: bold;
+  -fx-font-size: 14px;
 }
 
 /* Fix the MenuBar contrast */
 .custom-menu-bar {
-    -fx-background-color: transparent;
+  -fx-background-color: transparent;
 }
 
 /* Target the text inside the top-level menus (File, Edit, Help) */
 .custom-menu-bar .menu {
-    -fx-background-color: transparent;
+  -fx-background-color: transparent;
 }
 .custom-menu-bar .menu > .label {
-    -fx-text-fill: white;
+  -fx-text-fill: white;
 }
 
 /* Add a subtle hover effect to the top-level menus */
 .custom-menu-bar .menu:hover {
-    -fx-background-color: #444444;
+  -fx-background-color: #444444;
 }
 
 /* Style the base window control buttons */
 .window-btn {
-    -fx-background-color: transparent;
-    -fx-text-fill: white;
-    -fx-font-size: 12px;
-    -fx-padding: 5 10 5 10;
-    -fx-cursor: hand;
+  -fx-background-color: transparent;
+  -fx-text-fill: white;
+  -fx-font-size: 12px;
+  -fx-padding: 5 10 5 10;
+  -fx-cursor: hand;
 }
 
 /* Standard hover for minimize */
 .window-btn:hover {
-    -fx-background-color: #444444;
+  -fx-background-color: #444444;
 }
 
 /* OS-standard red hover for the close button */
 .close-btn:hover {
-    -fx-background-color: #e81123;
+  -fx-background-color: #e81123;
 }
