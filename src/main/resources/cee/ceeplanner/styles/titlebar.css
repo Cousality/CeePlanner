@@ -1,11 +1,11 @@
 /* Target the root HBox by its fx:id */
 #customTitleBar {
-  -fx-background-color: #4A4A57;
+  -fx-background-color: #1A1C1E;
 }
 
 /* Style the application title */
 .app-title {
-  -fx-text-fill: white;
+  -fx-text-fill: #E5E7EB;
   -fx-font-weight: bold;
   -fx-font-size: 14px;
 }
