@@ -4,7 +4,7 @@
 <?import javafx.scene.layout.*?>
 
 <BorderPane fx:controller="cee.ceeplanner.controller.WorkspaceController"
-            fx:id = "workspaceBG"
+
             stylesheets="@../styles/workspace.css"
             prefHeight="720.0" prefWidth="1080.0"
             xmlns:fx="http://javafx.com/fxml">
@@ -14,15 +14,41 @@
     </top>
 
     <center>
-        <SplitPane fx:id="mainWorkspace" dividerPositions="0.2">
-            <items>
-                <fx:include source="components/SideBar.fxml" />
+        <TabPane fx:id="mainTabPane"
+                 tabClosingPolicy="UNAVAILABLE"
+                 styleClass="workspace-tab-pane">
 
-                <AnchorPane>
-                    <Label text="Main Workspace Area" />
-                </AnchorPane>
-            </items>
-        </SplitPane>
+            <tabs>
+                <Tab text="To-Do List" fx:id="todoTab">
+                    <content>
+                        <fx:include source="TodoTab.fxml" />
+                    </content>
+                </Tab>
+
+                <Tab text="Notes" fx:id="notesTab">
+                    <content>
+                        <fx:include source="NotesTab.fxml" />
+                    </content>
+                </Tab>
+
+                <Tab text="UML Diagrams" fx:id="diagramTab">
+                    <content>
+                        <SplitPane fx:id="mainWorkspace" dividerPositions="0.2">
+                            <items>
+                                <fx:include source="components/SideBar.fxml" />
+
+                                <AnchorPane fx:id="canvas"
+                                            styleClass="workspace-canvas"
+                                            onDragOver="#onCanvasDragOver"
+                                            onDragDropped="#onCanvasDragDropped">
+                                </AnchorPane>
+                            </items>
+                        </SplitPane>
+                    </content>
+                </Tab>
+            </tabs>
+
+        </TabPane>
     </center>
 
 </BorderPane>

@@ -8,7 +8,7 @@ import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 
 
-public class App extends Application {
+public class  App extends Application {
     @Override
     public void start(Stage stage) throws Exception {
         FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("views/workspace.fxml"));
@@ -16,7 +16,7 @@ public class App extends Application {
 
 
         stage.initStyle(StageStyle.UNDECORATED);
-
+        stage.setMaximized(true);
         stage.setTitle("CeePlanner");
         stage.setScene(scene);
         stage.show();

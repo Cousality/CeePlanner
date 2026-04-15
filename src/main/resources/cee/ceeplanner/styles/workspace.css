@@ -1,7 +1,75 @@
-#workspaceBG {
-    -fx-background-color: #121212;
+#mainWorkspace {
+    -fx-background-color: #191919;
+}
+
+.workspaceText{
+    -fx-text-fill: #E5E7EB;
+    -fx-font-weight: bold;
+    -fx-font-size: 14px;
+    -fx-padding: 0 10 10 10;
 }
 
 #mainWorkspace {
-    -fx-background-color: #121212;
+    -fx-background-color: #191919;
+}
+
+.workspaceText{
+    -fx-text-fill: #E5E7EB;
+    -fx-font-weight: bold;
+    -fx-font-size: 14px;
+    -fx-padding: 0 10 10 10;
+}
+
+/* ── Tab Pane container ───────────────────────────────────────────────────── */
+.workspace-tab-pane {
+    -fx-background-color: #191919;
+    -fx-tab-min-height: 36px;
+}
+
+.workspace-tab-pane .tab-header-area {
+    -fx-background-color: #111111;
+    -fx-padding: 4 0 0 0;
+}
+
+.workspace-tab-pane .tab-header-background {
+    -fx-background-color: #111111;
+}
+
+/* ── Individual tabs ─────────────────────────────────────────────────────── */
+.workspace-tab-pane .tab {
+    -fx-background-color: #252525;
+    -fx-background-radius: 4 4 0 0;
+    -fx-padding: 6 16 6 16;
+}
+
+.workspace-tab-pane .tab .tab-label {
+    -fx-text-fill: #9CA3AF;
+    -fx-font-weight: bold;
+    -fx-font-size: 14px;
+}
+
+/* ── Hover state ─────────────────────────────────────────────────────────── */
+.workspace-tab-pane .tab:hover {
+    -fx-background-color: #2E2E2E;
+}
+
+.workspace-tab-pane .tab:hover .tab-label {
+    -fx-text-fill: #E5E7EB;
+}
+
+/* ── Selected/active tab ─────────────────────────────────────────────────── */
+.workspace-tab-pane .tab:selected {
+    -fx-background-color: #191919;
+    -fx-border-color: #E5E7EB transparent transparent transparent;
+    -fx-border-width: 2 0 0 0;
+}
+
+.workspace-tab-pane .tab:selected .tab-label {
+    -fx-text-fill: #E5E7EB;
+}
+
+/* ── Tab content area ────────────────────────────────────────────────────── */
+.workspace-tab-pane .tab-content-area {
+    -fx-background-color: #191919;
+    -fx-padding: 0;
 }

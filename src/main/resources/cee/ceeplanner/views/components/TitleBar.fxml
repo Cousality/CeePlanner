@@ -10,7 +10,7 @@
       fx:controller="cee.ceeplanner.controller.TitleBarController">
 
     <padding>
-        <Insets left="15.0" right="10.0"/>
+        <Insets left="15.0" />
     </padding>
 
     <Label text="CeePlanner" styleClass="app-title"/>

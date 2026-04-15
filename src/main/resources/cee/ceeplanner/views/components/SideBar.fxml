@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
@@ -8,10 +7,10 @@
       xmlns:fx="http://javafx.com/fxml"
       stylesheets="@../../styles/Sidebar.css"
       fx:controller="cee.ceeplanner.controller.SidebarController"
-      minWidth="180.0" prefWidth="240.0" spacing="15.0">
+      minWidth="180.0" maxWidth="180.0" spacing="15.0">
 
-    <Label text="Toolbox" style="-fx-font-weight: bold; -fx-font-size: 14px;"/>
+    <Label text="Toolbox" styleClass="sidebarText"/>
 
-
+    <StackPane fx:id="templateContainer" />
 
 </VBox>
