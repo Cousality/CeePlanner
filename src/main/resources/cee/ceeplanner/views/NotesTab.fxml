@@ -2,11 +2,40 @@
 
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
 
 <AnchorPane fx:id="notesPane"
             styleClass="tab-content-pane"
-            xmlns:fx="http://javafx.com/fxml">
+            stylesheets="@../styles/notes.css"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="cee.ceeplanner.controller.NotesController">
 
-    <!-- Notes content goes here -->
+    <VBox AnchorPane.topAnchor="0"
+          AnchorPane.bottomAnchor="0"
+          AnchorPane.leftAnchor="0"
+          AnchorPane.rightAnchor="0">
+
+        <!-- Slim notes toolbar -->
+        <HBox styleClass="notes-toolbar" alignment="CENTER_LEFT" spacing="10">
+            <padding>
+                <Insets top="6" right="12" bottom="6" left="12" />
+            </padding>
+            <Label text="Notes" styleClass="notes-title-label" />
+            <Region HBox.hgrow="ALWAYS" />
+            <Label fx:id="statusLabel" text="" styleClass="notes-status-label" />
+            <Button fx:id="clearButton"
+                    text="Clear"
+                    styleClass="notes-clear-button"
+                    onAction="#onClearNotes" />
+        </HBox>
+
+        <!-- Notes writing area -->
+        <TextArea fx:id="notesTextArea"
+                  promptText="Start writing your notes here..."
+                  styleClass="notes-text-area"
+                  wrapText="true"
+                  VBox.vgrow="ALWAYS" />
+
+    </VBox>
 
 </AnchorPane>

@@ -62,7 +62,11 @@
     -fx-background-color: #191919;
     -fx-border-color: #E5E7EB transparent transparent transparent;
     -fx-border-width: 2 0 0 0;
+    -fx-focus-color: transparent;
+    -fx-faint-focus-color: transparent;
 }
+
+
 
 .workspace-tab-pane .tab:selected .tab-label {
     -fx-text-fill: #E5E7EB;
@@ -73,3 +77,4 @@
     -fx-background-color: #191919;
     -fx-padding: 0;
 }
+

@@ -1,0 +1,83 @@
+/* ── Notes Tab ───────────────────────────────────────────────────────────── */
+
+.notes-toolbar {
+    -fx-background-color: #111111;
+    -fx-border-color: transparent transparent #252525 transparent;
+    -fx-border-width: 0 0 1 0;
+}
+
+.notes-title-label {
+    -fx-text-fill: #E5E7EB;
+    -fx-font-weight: bold;
+    -fx-font-size: 14px;
+}
+
+.notes-status-label {
+    -fx-text-fill: #9CA3AF;
+    -fx-font-size: 12px;
+}
+
+.notes-clear-button {
+    -fx-background-color: transparent;
+    -fx-text-fill: #9CA3AF;
+    -fx-font-size: 12px;
+    -fx-padding: 4 12 4 12;
+    -fx-cursor: hand;
+    -fx-background-radius: 4;
+    -fx-border-color: #3A3A3A;
+    -fx-border-radius: 4;
+    -fx-border-width: 1;
+}
+
+.notes-clear-button:hover {
+    -fx-background-color: #2E2E2E;
+    -fx-text-fill: #E5E7EB;
+    -fx-border-color: #555555;
+}
+
+.notes-text-area {
+    -fx-background-color: #191919;
+    -fx-text-fill: #E5E7EB;
+    -fx-font-size: 14px;
+    -fx-font-family: "Segoe UI", sans-serif;
+    -fx-highlight-fill: #3A3F4B;
+    -fx-highlight-text-fill: #E5E7EB;
+    -fx-border-width: 0;
+    -fx-background-insets: 0;
+    -fx-padding: 12 16 12 16;
+}
+
+/* Remove the inner content pane background */
+.notes-text-area .content {
+    -fx-background-color: #191919;
+}
+
+/* Style the scroll bar to match the dark theme */
+.notes-text-area .scroll-bar:vertical {
+    -fx-background-color: #191919;
+}
+
+.notes-text-area .scroll-bar:vertical .track {
+    -fx-background-color: #252525;
+}
+
+.notes-text-area .scroll-bar:vertical .thumb {
+    -fx-background-color: #3A3A3A;
+    -fx-background-radius: 4;
+}
+
+.notes-text-area .scroll-bar:vertical .thumb:hover {
+    -fx-background-color: #555555;
+}
+
+/* Hide the scroll bar increment/decrement arrows */
+.notes-text-area .scroll-bar .increment-button,
+.notes-text-area .scroll-bar .decrement-button {
+    -fx-background-color: transparent;
+    -fx-padding: 0;
+}
+
+/* Prompt text colour */
+.notes-text-area:empty .prompt-text {
+    -fx-fill: #4B5563;
+}

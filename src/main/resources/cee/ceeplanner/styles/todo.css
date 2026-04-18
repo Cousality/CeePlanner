@@ -1,0 +1,271 @@
+/* ══════════════════════════════════════════════════════════════════════════════
+   todo.css  —  Trello-style board for ceeplanner
+   Colour palette kept consistent with workspace.css
+   ══════════════════════════════════════════════════════════════════════════════ */
+
+/* ── Board scroll container ──────────────────────────────────────────────── */
+.todo-board-scroll {
+    -fx-background-color: #191919;
+    -fx-background: #191919;
+    -fx-border-color: transparent;
+}
+
+.todo-board-scroll > .viewport {
+    -fx-background-color: #191919;
+}
+
+/* ── Lists row ───────────────────────────────────────────────────────────── */
+.todo-lists-container {
+    -fx-background-color: #191919;
+    -fx-padding: 20 20 20 20;
+    -fx-min-height: 100%;
+}
+
+/* ── List column ─────────────────────────────────────────────────────────── */
+.todo-list-column {
+    -fx-background-color: #252525;
+    -fx-background-radius: 8;
+    -fx-padding: 10 10 10 10;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.4), 6, 0, 0, 2);
+}
+
+/* ── List header ─────────────────────────────────────────────────────────── */
+.todo-list-header {
+    -fx-padding: 0 0 6 0;
+}
+
+.todo-list-title {
+    -fx-text-fill: #E5E7EB;
+    -fx-font-weight: bold;
+    -fx-font-size: 14px;
+    -fx-cursor: hand;
+}
+
+.todo-list-delete-btn {
+    -fx-background-color: transparent;
+    -fx-text-fill: #6B7280;
+    -fx-font-size: 13px;
+    -fx-padding: 2 6 2 6;
+    -fx-cursor: hand;
+    -fx-background-radius: 4;
+}
+
+.todo-list-delete-btn:hover {
+    -fx-background-color: #3A3A3A;
+    -fx-text-fill: #EF4444;
+}
+
+/* ── Tasks scroll pane ───────────────────────────────────────────────────── */
+.todo-tasks-scroll {
+    -fx-background-color: transparent;
+    -fx-background: transparent;
+    -fx-border-color: transparent;
+    -fx-padding: 0;
+}
+
+.todo-tasks-scroll > .viewport {
+    -fx-background-color: transparent;
+}
+
+.todo-tasks-scroll .scroll-bar:vertical {
+    -fx-background-color: transparent;
+    -fx-pref-width: 6px;
+}
+
+.todo-tasks-scroll .scroll-bar:vertical .thumb {
+    -fx-background-color: #3A3A3A;
+    -fx-background-radius: 3;
+}
+
+.todo-tasks-scroll .scroll-bar:vertical .track {
+    -fx-background-color: transparent;
+}
+
+.todo-tasks-scroll .scroll-bar:vertical .increment-button,
+.todo-tasks-scroll .scroll-bar:vertical .decrement-button {
+    -fx-background-color: transparent;
+    -fx-padding: 0;
+}
+
+.todo-tasks-scroll .scroll-bar:vertical .increment-arrow,
+.todo-tasks-scroll .scroll-bar:vertical .decrement-arrow {
+    -fx-shape: "";
+    -fx-padding: 0;
+}
+
+/* ── Tasks VBox ──────────────────────────────────────────────────────────── */
+.todo-tasks-box {
+    -fx-background-color: transparent;
+    -fx-padding: 2 0 2 0;
+}
+
+/* ── Individual task card ────────────────────────────────────────────────── */
+.todo-task-card {
+    -fx-background-color: #2E2E2E;
+    -fx-background-radius: 6;
+    -fx-padding: 8 10 8 10;
+    -fx-cursor: default;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 3, 0, 0, 1);
+}
+
+.todo-task-card:hover {
+    -fx-background-color: #363636;
+}
+
+.todo-task-check {
+    -fx-mark-color: #E5E7EB;
+}
+
+.todo-task-check .box {
+    -fx-background-color: #3A3A3A;
+    -fx-border-color: #6B7280;
+    -fx-border-radius: 3;
+    -fx-background-radius: 3;
+}
+
+.todo-task-check:selected .box {
+    -fx-background-color: #3B82F6;
+    -fx-border-color: #3B82F6;
+}
+
+.todo-task-label {
+    -fx-text-fill: #E5E7EB;
+    -fx-font-size: 13px;
+}
+
+.todo-task-label-done {
+    -fx-text-fill: #6B7280;
+    -fx-strikethrough: true;
+}
+
+.todo-task-delete-btn {
+    -fx-background-color: transparent;
+    -fx-text-fill: #6B7280;
+    -fx-font-size: 11px;
+    -fx-padding: 0 4 0 4;
+    -fx-cursor: hand;
+    -fx-background-radius: 3;
+}
+
+.todo-task-delete-btn:hover {
+    -fx-background-color: #3A3A3A;
+    -fx-text-fill: #EF4444;
+}
+
+/* ── Add-card area ───────────────────────────────────────────────────────── */
+.todo-add-card-area {
+    -fx-padding: 4 0 0 0;
+}
+
+.todo-add-card-btn {
+    -fx-background-color: transparent;
+    -fx-text-fill: #9CA3AF;
+    -fx-font-size: 13px;
+    -fx-alignment: CENTER_LEFT;
+    -fx-padding: 6 8 6 8;
+    -fx-cursor: hand;
+    -fx-background-radius: 6;
+    -fx-border-color: transparent;
+}
+
+.todo-add-card-btn:hover {
+    -fx-background-color: #2E2E2E;
+    -fx-text-fill: #E5E7EB;
+}
+
+/* ── Card textarea input ─────────────────────────────────────────────────── */
+.todo-card-input {
+    -fx-background-color: #1E1E1E;
+    -fx-text-fill: #E5E7EB;
+    -fx-prompt-text-fill: #6B7280;
+    -fx-background-radius: 6;
+    -fx-border-color: #3B82F6;
+    -fx-border-radius: 6;
+    -fx-border-width: 1.5;
+    -fx-font-size: 13px;
+    -fx-padding: 6 8 6 8;
+    -fx-focus-color: transparent;
+    -fx-faint-focus-color: transparent;
+}
+
+.todo-card-input .content {
+    -fx-background-color: #1E1E1E;
+}
+
+/* ── Shared text input field (list title) ────────────────────────────────── */
+.todo-input-field {
+    -fx-background-color: #1E1E1E;
+    -fx-text-fill: #E5E7EB;
+    -fx-prompt-text-fill: #6B7280;
+    -fx-background-radius: 6;
+    -fx-border-color: #3B82F6;
+    -fx-border-radius: 6;
+    -fx-border-width: 1.5;
+    -fx-font-size: 13px;
+    -fx-padding: 6 8 6 8;
+    -fx-focus-color: transparent;
+    -fx-faint-focus-color: transparent;
+}
+
+/* Rename field: full-width, no separate box */
+.todo-rename-field {
+    -fx-font-weight: bold;
+    -fx-font-size: 14px;
+}
+
+/* ── Confirm / cancel buttons (shared) ───────────────────────────────────── */
+.todo-confirm-btn {
+    -fx-background-color: #3B82F6;
+    -fx-text-fill: #FFFFFF;
+    -fx-font-weight: bold;
+    -fx-font-size: 13px;
+    -fx-background-radius: 6;
+    -fx-padding: 6 14 6 14;
+    -fx-cursor: hand;
+    -fx-border-color: transparent;
+}
+
+.todo-confirm-btn:hover {
+    -fx-background-color: #2563EB;
+}
+
+.todo-x-btn {
+    -fx-background-color: transparent;
+    -fx-text-fill: #9CA3AF;
+    -fx-font-size: 13px;
+    -fx-padding: 4 8 4 8;
+    -fx-cursor: hand;
+    -fx-background-radius: 6;
+    -fx-border-color: transparent;
+}
+
+.todo-x-btn:hover {
+    -fx-background-color: #2E2E2E;
+    -fx-text-fill: #E5E7EB;
+}
+
+/* ── "Add a list" column ─────────────────────────────────────────────────── */
+.todo-add-list-box {
+    -fx-min-width: 200;
+    -fx-pref-width: 264;
+    -fx-background-color: rgba(37,37,37,0.6);
+    -fx-background-radius: 8;
+    -fx-padding: 10 10 10 10;
+}
+
+.todo-add-list-btn {
+    -fx-background-color: rgba(255,255,255,0.08);
+    -fx-text-fill: #E5E7EB;
+    -fx-font-size: 13px;
+    -fx-font-weight: bold;
+    -fx-padding: 8 14 8 14;
+    -fx-background-radius: 6;
+    -fx-cursor: hand;
+    -fx-border-color: transparent;
+    -fx-max-width: Infinity;
+    -fx-alignment: CENTER_LEFT;
+}
+
+.todo-add-list-btn:hover {
+    -fx-background-color: rgba(255,255,255,0.14);
+}

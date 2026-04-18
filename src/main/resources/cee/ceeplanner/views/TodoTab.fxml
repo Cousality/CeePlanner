@@ -5,8 +5,25 @@
 
 <AnchorPane fx:id="todoPane"
             styleClass="tab-content-pane"
-            xmlns:fx="http://javafx.com/fxml">
+            stylesheets="@../styles/todo.css"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="cee.ceeplanner.controller.TodoController">
 
-    <!-- To-Do List content goes here -->
+    <ScrollPane fx:id="boardScroll"
+                styleClass="todo-board-scroll"
+                fitToHeight="true"
+                hbarPolicy="AS_NEEDED"
+                vbarPolicy="NEVER"
+                AnchorPane.topAnchor="0"
+                AnchorPane.bottomAnchor="0"
+                AnchorPane.leftAnchor="0"
+                AnchorPane.rightAnchor="0">
+        <content>
+            <HBox fx:id="listsContainer"
+                  styleClass="todo-lists-container"
+                  spacing="12"
+                  alignment="TOP_LEFT" />
+        </content>
+    </ScrollPane>
 
 </AnchorPane>
