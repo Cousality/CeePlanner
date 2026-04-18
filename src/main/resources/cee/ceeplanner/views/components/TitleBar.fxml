@@ -16,14 +16,15 @@
     <Label text="CeePlanner" styleClass="app-title"/>
 
     <MenuBar fx:id="menuBar" styleClass="custom-menu-bar">
-            <Menu text="File">
-                <MenuItem text="New Workspace "/>
-                <MenuItem text="Open Workspace"/>
-                <SeparatorMenuItem />
-                <MenuItem text="Save"/>
-                <MenuItem text="Save As"/>
-                <MenuItem text="Exit" onAction="#handleExit"/>
-            </Menu>
+        <Menu text="File">
+            <MenuItem fx:id="menuNew"    text="New Workspace"  onAction="#handleNew"/>
+            <MenuItem fx:id="menuOpen"   text="Open Workspace" onAction="#handleOpen"/>
+            <SeparatorMenuItem />
+            <MenuItem fx:id="menuSave"   text="Save"           onAction="#handleSave"/>
+            <MenuItem fx:id="menuSaveAs" text="Save As"        onAction="#handleSaveAs"/>
+            <SeparatorMenuItem />
+            <MenuItem                    text="Exit"           onAction="#handleExit"/>
+        </Menu>
         <Menu text="Edit">
             <MenuItem text="Undo"/>
             <MenuItem text="Redo"/>
@@ -36,7 +37,7 @@
     <Region HBox.hgrow="ALWAYS" />
 
     <HBox spacing="5.0" alignment="CENTER">
-        <Button text="—" onAction="#handleMinimize" styleClass="window-btn"/>
-        <Button text="X" onAction="#handleExit" styleClass="window-btn, close-btn"/>
+        <Button text="&#x2014;" onAction="#handleMinimize" styleClass="window-btn"/>
+        <Button text="X"        onAction="#handleExit"     styleClass="window-btn, close-btn"/>
     </HBox>
 </HBox>
