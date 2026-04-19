@@ -7,7 +7,6 @@ import javafx.fxml.FXML;
 import javafx.scene.Node;
 import javafx.scene.control.Menu;
 import javafx.scene.control.MenuBar;
-import javafx.scene.control.MenuItem;
 import javafx.scene.layout.HBox;
 import javafx.stage.Stage;
 
@@ -18,11 +17,6 @@ public class TitleBarController {
     @FXML private HBox     customTitleBar;
     @FXML private MenuBar  menuBar;
 
-    // File menu items
-    @FXML private MenuItem menuNew;
-    @FXML private MenuItem menuOpen;
-    @FXML private MenuItem menuSave;
-    @FXML private MenuItem menuSaveAs;
 
     private double xOffset = 0;
     private double yOffset = 0;
