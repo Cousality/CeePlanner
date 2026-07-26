@@ -30,22 +30,6 @@
                         <fx:include source="NotesTab.fxml" />
                     </content>
                 </Tab>
-
-                <Tab text="UML Diagrams" fx:id="diagramTab">
-                    <content>
-                        <SplitPane fx:id="mainWorkspace" dividerPositions="0.2">
-                            <items>
-                                <fx:include source="components/SideBar.fxml" />
-
-                                <AnchorPane fx:id="canvas"
-                                            styleClass="workspace-canvas"
-                                            onDragOver="#onCanvasDragOver"
-                                            onDragDropped="#onCanvasDragDropped">
-                                </AnchorPane>
-                            </items>
-                        </SplitPane>
-                    </content>
-                </Tab>
             </tabs>
 
         </TabPane>
