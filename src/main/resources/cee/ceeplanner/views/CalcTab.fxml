@@ -4,9 +4,9 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.geometry.Insets?>
 
-<AnchorPane fx:id="todoPane"
+<AnchorPane fx:id="calcPane"
             styleClass="tab-content-pane"
             stylesheets="@../styles/todo.css"
             xmlns:fx="http://javafx.com/fxml"
-            fx:controller="cee.ceeplanner.controller.TodoController">
+            fx:controller="cee.ceeplanner.controller.CalcController">
 </AnchorPane>

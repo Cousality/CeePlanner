@@ -3,7 +3,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<BorderPane fx:controller="cee.ceeplanner.controller.WorkspaceController"
+<BorderPane
 
             stylesheets="@../styles/workspace.css"
             prefHeight="720.0" prefWidth="1080.0"
@@ -14,24 +14,20 @@
     </top>
 
     <center>
-        <TabPane fx:id="mainTabPane"
+        <TabPane
                  tabClosingPolicy="UNAVAILABLE"
                  styleClass="workspace-tab-pane">
 
-            <tabs>
-                <Tab text="To-Do List" fx:id="todoTab">
-                    <content>
-                        <fx:include source="TodoTab.fxml" />
-                    </content>
-                </Tab>
+            <Tab text="To-Do List" fx:id="todoTab">
+                <fx:include source="TodoTab.fxml"/>
+            </Tab>
 
-                <Tab text="Notes" fx:id="notesTab">
-                    <content>
-                        <fx:include source="NotesTab.fxml" />
-                    </content>
-                </Tab>
-            </tabs>
-
+            <Tab text="Notes" fx:id="notesTab">
+                <fx:include source="NotesTab.fxml"/>
+            </Tab>
+            <Tab text="Calc" fx:id="CalcTab">
+                <fx:include source="CalcTab.fxml"/>
+            </Tab>
         </TabPane>
     </center>
 
